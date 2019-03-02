@@ -23,8 +23,6 @@ redirect_form:
   - /components/sensor.blink/
 ---
 
-<p class='note warning'>Blink has started blocking Home Assistant users. More info in <a href="https://community.home-assistant.io/t/blink-block-account/98718">the forums</a>.</p>
-
 The `blink` component lets you view camera images and motion events from [Blink](http://blinkforhome.com) camera and security systems.
 
 ## {% linkable_title Setup %}
@@ -111,7 +109,7 @@ blink:
 
 ### {% linkable_title `blink.blink_update` %}
 
-Force a refresh of the Blink system.
+Force a refresh of the Blink system.  A minimum of a 5 second delay should be placed in between any sequential calls to this service, otherwise the request will be throttled and ignored.
 
 ### {% linkable_title `blink.trigger_camera` %}
 
